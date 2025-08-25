@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Zaraman Ali - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; margin: 0; background: #f4f4f4; color: #222; }
+        header { background: #222; color: #fff; padding: 2rem 0; text-align: center; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; }
+        nav li { margin: 0 1.5rem; }
+        nav a { text-decoration: none; color: #222; font-weight: 700; padding: 1rem 0; display: block; }
+        nav a.active, nav a:hover { color: #0078d7; }
+        .container { max-width: 900px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        @media (max-width: 600px) {
+            nav ul { flex-direction: column; }
+            nav li { margin: 0.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Mohammed Zaraman Ali</h1>
+    <p>Portfolio Website</p>
+    <p><a href="CV_Muhammad_Zargham_Ali.pdf" target="_blank" style="color:#fff;text-decoration:underline;font-weight:bold;">Download CV (PDF)</a></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#projects" class="active" onclick="showTab('projects')">Projects</a></li>
+            <li><a href="#videos" onclick="showTab('videos')">Videos</a></li>
+            <li><a href="#updates" onclick="showTab('updates')">Updates & IP</a></li>
+            <li><a href="#education" onclick="showTab('education')">Education</a></li>
+            <li><a href="#experiences" onclick="showTab('experiences')">Experiences</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="projects" class="tab-content active">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Smart Motion Detection System</strong> - Developed an intelligent motion detection system using computer vision and AI algorithms for security applications.</li>
+                <li><strong>IoT Home Automation</strong> - Designed and implemented IoT-based solutions for smart home automation, integrating sensors and cloud services.</li>
+                <li><strong>AI-based Traffic Analysis</strong> - Created a traffic analysis tool using machine learning to optimize urban traffic flow.</li>
+            </ul>
+        </section>
+        <section id="videos" class="tab-content">
+            <h2>Videos of Projects</h2>
+            <p>Embed videos of your projects here.</p>
+        </section>
+        <section id="updates" class="tab-content">
+            <h2>Updates & IP</h2>
+            <p>Share updates and intellectual property information here.</p>
+        </section>
+        <section id="education" class="tab-content">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PhD in Computer Science</strong> - University of XYZ, 2022</li>
+                <li><strong>MS in Artificial Intelligence</strong> - University of ABC, 2018</li>
+                <li><strong>BS in Software Engineering</strong> - University of DEF, 2015</li>
+            </ul>
+            <p><a href="CV_Muhammad_Zargham_Ali.pdf" target="_blank">View Full CV (PDF)</a></p>
+        </section>
+        <section id="experiences" class="tab-content">
+            <h2>Experiences</h2>
+            <ul>
+                <li><strong>Senior AI Engineer</strong> - Tech Innovations Ltd. (2022-Present)<br>Leading AI research and development projects in computer vision and automation.</li>
+                <li><strong>Software Developer</strong> - Smart Solutions Inc. (2018-2022)<br>Developed software for IoT and machine learning applications.</li>
+                <li><strong>Research Assistant</strong> - University of ABC (2015-2018)<br>Worked on academic research in artificial intelligence and robotics.</li>
+            </ul>
+            <p><a href="CV_Muhammad_Zargham_Ali.pdf" target="_blank">View Full CV (PDF)</a></p>
+        </section>
+    </div>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+            document.querySelectorAll('nav a').forEach(function(link) {
+                link.classList.remove('active');
+            });
+            document.querySelector('nav a[href="#' + tabId + '"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
