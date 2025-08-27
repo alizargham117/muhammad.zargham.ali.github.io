@@ -3,157 +3,482 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio and CV of Muhammad Zargham Ali, Control/System Engineer specializing in UAVs, automotive software, and embedded systems.">
     <title>Muhammad Zargham Ali - Portfolio & CV</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Roboto', sans-serif; margin: 0; background: #f4f4f4; color: #222; }
-        header { background: #222; color: #fff; padding: 2rem 0; text-align: center; }
-        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; }
-        nav li { margin: 0 1.5rem; }
-        nav a { text-decoration: none; color: #222; font-weight: 700; padding: 1rem 0; display: block; }
-        nav a.active, nav a:hover { color: #0078d7; }
-        .container { max-width: 900px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        @media (max-width: 600px) {
-            nav ul { flex-direction: column; }
-            nav li { margin: 0.5rem 0; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: #f6f8fa;
+            color: #222;
+            /* Moved .education-badge styles into the <style> block */
+            .education-badge {
+                display: inline-block;
+                background: #e3eaf2;
+                color: #0056b3;
+                border-radius: 20px;
+                padding: 0.4em 1em;
+                margin: 0.2em 0.3em 0.2em 0;
+                font-size: 1em;
+                font-weight: 500;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+                text-decoration: none;
+                border: none;
+                transition: background 0.2s, color 0.2s;
+            }
+            .education-badge:hover {
+                background: #c7dbf4;
+                color: #003366;
+                text-decoration: underline;
+            }
+        .main-layout {
+            display: flex;
+            min-height: 100vh;
+            background: #f6f8fa;
+            flex-direction: row;
+            align-items: stretch;
         }
-        .contact-info { margin-bottom: 1rem; }
-        .contact-info li { list-style: none; margin-bottom: 0.5rem; }
+        .right-panel {
+            width: 255px;
+            min-width: 195px;
+            background: linear-gradient(135deg, #1e2a38 80%, #0078d7 100%);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 0 16px 16px 0;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+            position: relative;
+            min-height: 100vh;
+            height: auto;
+            z-index: 2;
+            border-right: 4px solid #0078d7;
+            border-left: none;
+        }
+        .right-panel h1 {
+            width: 100%;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+        .right-panel h1 br {
+            display: none;
+        }
+        .left-panel {
+            flex: 1 1 0%;
+            width: calc(100vw - 255px);
+            margin: 0;
+            background: linear-gradient(120deg, #f6f8fa 80%, #e3eaf2 100%);
+            padding: 2rem 2rem 2rem 2rem;
+            border-radius: 16px 0 0 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: flex-start;
+            text-align: left;
+            height: auto;
+        }
+        .nav-top {
+            background: #f6f8fa;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 16px 0 0 0;
+            margin-bottom: 2rem;
+            padding: 0.5rem 0;
+            border-left: 4px solid #0078d7;
+            width: 100%;
+        }
+        .nav-top ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            gap: 1rem;
+            overflow-x: auto;
+            width: 100%;
+        }
+        .nav-top li {
+            margin: 0;
+            flex: 1 1 0;
+            display: flex;
+        }
+        .nav-top a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e3eaf2;
+            color: #1e2a38;
+            border-radius: 24px;
+            padding: 0.5rem 1.2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            border: none;
+            cursor: pointer;
+        }
+        .nav-top a.active, .nav-top a:hover {
+            background: #0078d7;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0,120,215,0.15);
+        }
+        .tab-content {
+            display: none;
+            margin-bottom: 2rem;
+        }
+        .tab-content.active {
+            display: block;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e3eaf2;
+            animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            font-size: 2rem;
+            color: #0078d7;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        h3 {
+            font-size: 1.2rem;
+            color: #1e2a38;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .header-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+        .header-links a:hover {
+            color: #90cdf4;
+        }
+        .contact-info {
+            width: 100%;
+            padding-left: 0;
+        }
+        .contact-info li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+            text-align: left;
+            padding-left: 0;
+        }
+        .cv-link { margin-top: 1rem; }
+        @media (max-width: 900px) {
+            .main-layout { flex-direction: column; }
+            .right-panel { max-width: 100%; border-radius: 16px 16px 0 0; position: static; height: auto; border-right: none; }
+            .left-panel { border-radius: 0 0 16px 16px; margin-left: 0; width: 100vw; }
+            .nav-top ul { flex-direction: row; gap: 0.5rem; }
+            .experience-card, .education-card, .skill-card, .publication-card, .test-card, .activity-card, .reference-card {
+                padding: 1rem 0.5rem;
+            }
+        }
+        .tab-content p {
+            text-align: justify;
+        }
+        /* Remove book icon from tab headings */
+        .tab-content h2::before {
+            content: "";
+            display: none;
+        }
+        /* Skill button styles */
+        .skill-btn {
+            display: inline-block;
+            background: #e3eaf2;
+            color: #0056b3;
+            border: none;
+            border-radius: 20px;
+            padding: 0.4em 1em;
+            margin: 0.2em 0.3em 0.2em 0;
+            font-size: 1em;
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+            cursor: default;
+            transition: background 0.2s, color 0.2s;
+        }
+        .skill-btn:hover {
+            background: #c7dbf4;
+            color: #003366;
+        }
+        .education-degree {
+            display: inline-block;
+            background: #f6f8fa;
+            color: #333;
+            border-radius: 16px;
+            padding: 0.3em 0.8em;
+            margin: 0.2em 0.3em 0.2em 0;
+            font-size: 1em;
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+        }
+            .education-card {
+                background: #fff;
+                color: #222;
+                border-radius: 16px;
+                padding: 1.5em 2em;
+                margin-bottom: 2.2em;
+                box-shadow: 0 2px 12px rgba(0,120,215,0.10);
+                border: 1.5px solid #e3eaf2;
+                font-size: 1.08em;
+            }
+            .education-card:last-child {
+                margin-bottom: 0;
+            }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Muhammad Zargham Ali</h1>
-        <p>Control / System Engineer</p>
-        <ul class="contact-info">
-            <li>✉ <a href="mailto:alizargham117@gmail.com" style="color:#fff;">alizargham117@gmail.com</a></li>
-            <li>☏ +92 312 5217355</li>
-            <li>⚲ Faisalabad, Pakistan</li>
-            <li><a href="https://scholar.google.com/" target="_blank" style="color:#fff;text-decoration:underline;">Google Scholar</a></li>
-        </ul>
-        <p><a href="CV_Muhammad_Zargham_Ali.pdf" target="_blank" style="color:#fff;text-decoration:underline;font-weight:bold;">Download CV (PDF)</a></p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#statement" class="active" onclick="showTab('statement')">Personal Statement</a></li>
-            <li><a href="#experience" onclick="showTab('experience')">Experience</a></li>
-            <li><a href="#education" onclick="showTab('education')">Education</a></li>
-            <li><a href="#skills" onclick="showTab('skills')">Technical Skills</a></li>
-            <li><a href="#publication" onclick="showTab('publication')">Publication</a></li>
-            <li><a href="#tests" onclick="showTab('tests')">Standardized Tests</a></li>
-            <li><a href="#activities" onclick="showTab('activities')">Extracurricular</a></li>
-            <li><a href="#references" onclick="showTab('references')">References</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <section id="statement" class="tab-content active">
-            <h2>Personal Statement</h2>
-            <p>
-                I’m a problem-solver at heart, thriving on engineering challenges and delivering results where it matters most. With over five years of experience in control systems, UAV avionics integration, and automotive software, I bring a unique combination of hardware integration expertise and software algorithm development skills.<br>
-                From developing custom flight control algorithms for unmanned systems to implementing SIL-tested ADAS features for OEMs like BYD and GM, my work bridges innovation and reliability. I have deep experience in embedded C++ development, real-world data debugging, and safety-critical software validation, along with a strong command of tools like MATLAB/Simulink, Git, and AUTOSAR.<br>
-                I thrive in demanding environments, take ownership of challenges, and believe excellence comes from commitment and persistence rather than comfort zones.
-            </p>
-        </section>
-        <section id="experience" class="tab-content">
-            <h2>Experience</h2>
-            <h3>National Center for Unmanned Aerial Systems (NCUAS), Islamabad, Pakistan</h3>
-            <strong>Manager (Senior System Engineer)</strong> <em>Dec 2021 – Present</em>
-            <ul>
-                <li>Led design, testing, and deployment of autonomous multirotor platforms with custom ArduPilot firmware for advanced targeting and payload delivery.</li>
-                <li>Oversaw UAV avionics manufacturing lines, ensuring integration consistency, system robustness, and compliance with operational requirements.</li>
-                <li>Engineered custom control algorithms for precision payload delivery to designated target areas using multirotor UAVs.</li>
-                <li>Developed and integrated auto-target locking functionality using image processing, camera gimbal control, and custom ArduPilot firmware enhancements.</li>
-                <li>Designed and implemented dive maneuver algorithms in ArduPilot for mission-specific autonomous descent and targeting applications.</li>
-                <li>Executed and supervised live flight trials across varied terrains and environmental conditions to validate mission readiness.</li>
-                <li>Delivered production-grade UAV platforms currently operational in military applications.</li>
-                <li>Functioned as the key bridge between control software, embedded avionics, and testing teams.</li>
+    <div class="main-layout">
+        <div class="right-panel">
+            <img src="Photo.png" alt="Muhammad Zargham Ali Photo" class="profile-photo">
+            <h1>Muhammad Zargham Ali</h1>
+            <p>Control / System Engineer</p>
+            <div class="header-links">
+                <a href="mailto:alizargham117@gmail.com" title="Email" style="color:#fff;text-decoration:none;"><span>✉</span> alizargham117@gmail.com</a>
+                <a href="https://www.linkedin.com/in/m-zargham-ali-3a91a314a" target="_blank" title="LinkedIn"><span>in</span> LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=Vs7_q2MAAAAJ&hl=en" target="_blank" title="Google Scholar"><span>📖</span> Google Scholar</a>
+            </div>
+            <ul class="contact-info">
+                <li>☏ +92 312 5217355</li>
+                <li>⚲ Faisalabad, Pakistan</li>
             </ul>
-            <strong>Assistant Manager (System Engineer)</strong> <em>Nov 2019 – Dec 2021</em>
-            <ul>
-                <li>Developed and tested UAV avionics systems, integrated payloads, and ensured platform readiness through calibration, validation, and pre-mission checks.</li>
-                <li>Integrated diverse camera payloads with multirotor UAV platforms using custom MAVLink protocols and extended ArduPilot open-source flight stack.</li>
-                <li>Developed and embedded custom libraries for real-time data transmission from UAV to Ground Control Station (GCS).</li>
-                <li>Led Avionics manufacturing oversight: validated and inspected flight-critical modules, including Flight Controllers, Companion Computers, Power Management Units, Radio Links, and Camera systems.</li>
-                <li>Executed pre-flight calibration and tuning, including compass offsets, level alignment, and sensor configuration.</li>
-                <li>Performed bench-level avionics validation and full-stack UAV system tests, ensuring signal integrity, redundancy, and uninterrupted power distribution.</li>
-                <li>Delivered field-ready surveillance UAVs currently deployed by the military for aerial monitoring.</li>
-            </ul>
-            <h3>Software Motion (Remote, Part-Time), Shanghai, China</h3>
-            <strong>Control Engineer</strong> <em>Dec 2024 – Present</em>
-            <ul>
-                <li>Delivering production-grade ADAS features in C++ with SIL testing, unit validation, and real-world data debugging for top automotive OEMs.</li>
-                <li>Design and implement ADAS functionalities in C++, including: Front Collision Warning (FCW), Autonomous Emergency Braking (AEB), Adaptive Cruise Control (ACC), Lane Keep Assist (LKA), Traffic Sign Recognition (TSR).</li>
-                <li>Develop unit tests using the Google Test framework (gTest) to verify software functionality against defined requirements and safety use cases.</li>
-                <li>Perform Software-in-the-Loop (SIL) testing using real-world driving data to evaluate and refine algorithm performance.</li>
-                <li>Analyze real vehicle test data using tools such as TS Master to debug abnormal behavior of ADAS functions and implement corrective logic in the embedded software.</li>
-                <li>Maintain and manage GitLab code repositories for different ADAS modules, with full command-line expertise in Git version control, branching strategies, and CI workflows.</li>
-                <li>Simulate and validate control strategies in MATLAB/Simulink, followed by integration with AUTOSAR-compliant systems for production readiness.</li>
-                <li>Collaborate with cross-functional teams to deliver solutions for major OEMs, including BYD, GM, and Ford.</li>
-                <li>Support technical onboarding of new employees, assist in technical interviews, and mentor junior engineers.</li>
-            </ul>
-        </section>
-        <section id="education" class="tab-content">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>Pakistan Institute of Engineering and Applied Sciences (PIEAS), Islamabad, Pakistan</strong><br>
-                    M.S. Systems Engineering <em>2017 - 2019</em><br>
-                    GPA: 3.77 / 4.0 | <a href="#">Transcript Link</a> | <a href="#">Thesis Link</a><br>
-                    Second Best Thesis Award, Research published at IFAC World Congress 2020, Teaching Assistant for Control Systems Lab.
-                </li>
-                <li>
-                    <strong>National University of Sciences & Technology (NUST), Islamabad, Pakistan</strong><br>
-                    B.E. Electrical Engineering <em>2013 - 2017</em><br>
-                    GPA: 3.68 / 4.0 | <a href="#">Transcript Link</a><br>
-                    Silver Medal for second-highest GPA, Merit-based scholarship, Designed electronic nose prototype for gas detection.
-                </li>
-            </ul>
-        </section>
-        <section id="skills" class="tab-content">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming & Tools:</strong> C++, Embedded C, Python, MATLAB/Simulink, Git, GitLab, Google Test, TS Master, LaTeX</li>
-                <li><strong>Embedded & Control Systems:</strong> PID, LQR, adaptive/nonlinear control, real-time systems, SIL testing, unit validation, algorithm development, AUTOSAR integration</li>
-                <li><strong>UAV Systems & Robotics:</strong> Flight control (ArduPilot, Pixhawk, Cube Orange), MAVLink, UAV dynamics, payload integration (LiDAR, cameras, companion computers), mission-specific maneuver design, field trials</li>
-                <li><strong>ADAS & Automotive Software:</strong> Feature development (FCW, AEB, ACC, LKA, TSR), vehicle dynamics, motion planning, model-based design, debugging with real-world data, OEM collaboration (BYD, GM, Ford)</li>
-                <li><strong>Electronics & Hardware Integration:</strong> PCB design, circuit simulation (LTSpice, PSpice, Proteus), microcontrollers (STM32, Arduino, PIC), sensors & protocols (CAN, UART, RS-485)</li>
-                <li><strong>Systems & Project Delivery:</strong> Systems integration, product development, avionics QA, team leadership, field testing, technical onboarding & mentoring</li>
-                <li><strong>Other Skills:</strong> AutoCAD, MS Office, Adobe Photoshop</li>
-            </ul>
-        </section>
-        <section id="publication" class="tab-content">
-            <h2>Publication</h2>
-            <ul>
-                <li>
+            <p class="cv-link"><a href="CV_Muhammad_Zargham_Ali.pdf" target="_blank" style="color:#fff;text-decoration:underline;font-weight:bold;">Download CV (PDF)</a></p>
+        </div>
+        <div class="left-panel">
+            <nav class="nav-top">
+                <ul>
+                    <li><a class="active" onclick="showTab('statement'); return false;">Personal Statement</a></li>
+                    <li><a onclick="showTab('experience'); return false;">Experience</a></li>
+                    <li><a onclick="showTab('education'); return false;">Education</a></li>
+                    <li><a onclick="showTab('skills'); return false;">Technical Skills</a></li>
+                    <li><a onclick="showTab('publication'); return false;">Publication</a></li>
+                    <li><a onclick="showTab('tests'); return false;">Standardized Tests</a></li>
+                    <li><a onclick="showTab('activities'); return false;">Extracurricular</a></li>
+                    <li><a onclick="showTab('references'); return false;">References</a></li>
+                </ul>
+            </nav>
+            <section id="statement" class="tab-content active">
+                <h2>Personal Statement</h2>
+                <p>
+                    I’m a problem-solver at heart, thriving on engineering challenges and delivering results where it matters most. With over five years of experience in control systems, UAV avionics integration, and automotive software, I bring a unique combination of hardware integration expertise and software algorithm development skills.<br>
+                    From developing custom flight control algorithms for unmanned systems to implementing SIL-tested ADAS features for OEMs like BYD and GM, my work bridges innovation and reliability. I have deep experience in embedded C++ development, real-world data debugging, and safety-critical software validation, along with a strong command of tools like MATLAB/Simulink, Git, and AUTOSAR.<br>
+                    I thrive in demanding environments, take ownership of challenges, and believe excellence comes from commitment and persistence rather than comfort zones.
+                </p>
+            </section>
+            <section id="experience" class="tab-content">
+                <h2>Experience</h2>
+                <div class="experience-card">
+                    <h3>National Center for Unmanned Aerial Systems (NCUAS), Islamabad, Pakistan</h3>
+                    <strong>Manager (Senior System Engineer)</strong> <em>Dec 2021 – Present</em>
+                    <ul>
+                        <li>Led design, testing, and deployment of autonomous multirotor platforms with custom ArduPilot firmware for advanced targeting and payload delivery.</li>
+                        <li>Oversaw UAV avionics manufacturing lines, ensuring integration consistency, system robustness, and compliance with operational requirements.</li>
+                        <li>Engineered custom control algorithms for precision payload delivery to designated target areas using multirotor UAVs.</li>
+                        <li>Developed and integrated auto-target locking functionality using image processing, camera gimbal control, and custom ArduPilot firmware enhancements.</li>
+                        <li>Designed and implemented dive maneuver algorithms in ArduPilot for mission-specific autonomous descent and targeting applications.</li>
+                        <li>Executed and supervised live flight trials across varied terrains and environmental conditions to validate mission readiness.</li>
+                        <li>Delivered production-grade UAV platforms currently operational in military applications.</li>
+                        <li>Functioned as the key bridge between control software, embedded avionics, and testing teams.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>National Center for Unmanned Aerial Systems (NCUAS), Islamabad, Pakistan</h3>
+                    <strong>Assistant Manager (System Engineer)</strong> <em>Nov 2019 – Dec 2021</em>
+                    <ul>
+                        <li>Developed and tested UAV avionics systems, integrated payloads, and ensured platform readiness through calibration, validation, and pre-mission checks.</li>
+                        <li>Integrated diverse camera payloads with multirotor UAV platforms using custom MAVLink protocols and extended ArduPilot open-source flight stack.</li>
+                        <li>Developed and embedded custom libraries for real-time data transmission from UAV to Ground Control Station (GCS).</li>
+                        <li>Led Avionics manufacturing oversight: validated and inspected flight-critical modules, including Flight Controllers, Companion Computers, Power Management Units, Radio Links, and Camera systems.</li>
+                        <li>Executed pre-flight calibration and tuning, including compass offsets, level alignment, and sensor configuration.</li>
+                        <li>Performed bench-level avionics validation and full-stack UAV system tests, ensuring signal integrity, redundancy, and uninterrupted power distribution.</li>
+                        <li>Delivered field-ready surveillance UAVs currently deployed by the military for aerial monitoring.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>Software Motion (Remote, Part-Time), Shanghai, China</h3>
+                    <strong>Control Engineer</strong> <em>Dec 2024 – Present</em>
+                    <ul>
+                        <li>Delivering production-grade ADAS features in C++ with SIL testing, unit validation, and real-world data debugging for top automotive OEMs.</li>
+                        <li>Design and implement ADAS functionalities in C++, including: Front Collision Warning (FCW), Autonomous Emergency Braking (AEB), Adaptive Cruise Control (ACC), Lane Keep Assist (LKA), Traffic Sign Recognition (TSR).</li>
+                        <li>Develop unit tests using the Google Test framework (gTest) to verify software functionality against defined requirements and safety use cases.</li>
+                        <li>Perform Software-in-the-Loop (SIL) testing using real-world driving data to evaluate and refine algorithm performance.</li>
+                        <li>Analyze real vehicle test data using tools such as TS Master to debug abnormal behavior of ADAS functions and implement corrective logic in the embedded software.</li>
+                        <li>Maintain and manage GitLab code repositories for different ADAS modules, with full command-line expertise in Git version control, branching strategies, and CI workflows.</li>
+                        <li>Simulate and validate control strategies in MATLAB/Simulink, followed by integration with AUTOSAR-compliant systems for production readiness.</li>
+                        <li>Collaborate with cross-functional teams to deliver solutions for major OEMs, including BYD, GM, and Ford.</li>
+                        <li>Support technical onboarding of new employees, assist in technical interviews, and mentor junior engineers.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="education" class="tab-content">
+                <h2>Education</h2>
+                <div class="education-card" style="margin-bottom:1.5em; display: flex; align-items: flex-start; gap: 1.2em;">
+                    <img src="logo_p.png" alt="PIEAS Logo" style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
+                    <div style="flex:1;">
+                        <h3 style="margin-top:0;">Pakistan Institute of Engineering and Applied Sciences (PIEAS), Islamabad, Pakistan</h3>
+                        <h4>M.S. Systems Engineering <em>2017 - 2019</em></h4>
+                        <div style="margin:0.7em 0 0.7em 0;">
+                            <span class="education-badge">GPA: 3.77 / 4.0</span>
+                            <a class="education-badge" href="#">Transcript</a>
+                            <a class="education-badge" href="#">Thesis</a>
+                            <span class="education-badge">Second Best Thesis Award</span>
+                            <span class="education-badge">IFAC World Congress 2020</span>
+                            <span class="education-badge">Teaching Assistant</span>
+                        </div>
+                        <div style="color:#444; font-size:0.98em;">Research published at IFAC World Congress 2020, Teaching Assistant for Control Systems Lab.</div>
+                    </div>
+                </div>
+                <div class="education-card" style="display: flex; align-items: flex-start; gap: 1.2em;">
+                    <img src="logo_n.png" alt="NUST Logo" style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
+                    <div style="flex:1;">
+                        <h3 style="margin-top:0;">National University of Sciences & Technology (NUST), Islamabad, Pakistan</h3>
+                        <h4>B.E. Electrical Engineering <em>2013 - 2017</em></h4>
+                        <div style="margin:0.7em 0 0.7em 0;">
+                            <span class="education-badge">GPA: 3.68 / 4.0</span>
+                            <a class="education-badge" href="#">Transcript</a>
+                            <span class="education-badge">Silver Medal</span>
+                            <span class="education-badge">Merit-based Scholarship</span>
+                            <span class="education-badge">Electronic Nose Prototype</span>
+                        </div>
+                        <div style="color:#444; font-size:0.98em;">Silver Medal for second-highest GPA, Merit-based scholarship, Designed electronic nose prototype for gas detection.</div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" class="tab-content">
+                <h2>Technical Skills</h2>
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <span class="skill-btn">Python</span>
+                    <span class="skill-btn">C++</span>
+                    <span class="skill-btn">MATLAB</span>
+                    <span class="skill-btn">Simulink</span>
+                    <span class="skill-btn">Embedded C</span>
+                    <span class="skill-btn">Shell Scripting</span>
+                    <span class="skill-btn">LaTeX</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Control & Robotics</h3>
+                    <span class="skill-btn">Control Systems</span>
+                    <span class="skill-btn">System Identification</span>
+                    <span class="skill-btn">State Estimation</span>
+                    <span class="skill-btn">Optimization</span>
+                    <span class="skill-btn">Signal Processing</span>
+                    <span class="skill-btn">Kalman Filtering</span>
+                    <span class="skill-btn">PID Tuning</span>
+                    <span class="skill-btn">Trajectory Planning</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Machine Learning & AI</h3>
+                    <span class="skill-btn">Machine Learning</span>
+                    <span class="skill-btn">Deep Learning</span>
+                    <span class="skill-btn">Computer Vision</span>
+                    <span class="skill-btn">TensorFlow</span>
+                    <span class="skill-btn">PyTorch</span>
+                    <span class="skill-btn">Scikit-learn</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Embedded & Software Tools</h3>
+                    <span class="skill-btn">Embedded Systems</span>
+                    <span class="skill-btn">RTOS</span>
+                    <span class="skill-btn">ROS</span>
+                    <span class="skill-btn">Git</span>
+                    <span class="skill-btn">Linux</span>
+                    <span class="skill-btn">AUTOSAR</span>
+                    <span class="skill-btn">Google Test (gTest)</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Other Skills</h3>
+                    <span class="skill-btn">Technical Writing</span>
+                    <span class="skill-btn">Project Management</span>
+                    <span class="skill-btn">Data Analysis</span>
+                    <span class="skill-btn">Teaching & Mentoring</span>
+                </div>
+            </section>
+            <section id="publication" class="tab-content">
+                <h2>Publication</h2>
+                <div class="publication-card">
                     Ali, M. Z., Ahmed, A., & Afridi, H. K. (2020). Control system analysis and design of quadcopter in the presence of unmodelled dynamics and disturbances. IFAC-PapersOnLine, 53(2), 8840–8846
                     [<a href="#">Link</a>]
-                </li>
-            </ul>
-        </section>
-        <section id="tests" class="tab-content">
-            <h2>Standardized Tests</h2>
-            <ul>
-                <li>GRE: 319 (Quantitative: 162, Verbal: 157)</li>
-                <li>IELTS: 8.0 Bands</li>
-            </ul>
-        </section>
-        <section id="activities" class="tab-content">
-            <h2>Extracurricular Activities & Volunteering</h2>
-            <ul>
-                <li>Competitive swimmer; winner of inter-university championships</li>
-                <li>Volunteer for blood donation drives and scholarship fundraising initiatives at NUST</li>
-            </ul>
-        </section>
-        <section id="references" class="tab-content">
-            <h2>References</h2>
-            <ul>
-                <li>Erfan Nejabat (Supervisor, Email: <a href="mailto:erfan.nejabat@sw-motion.cn">erfan.nejabat@sw-motion.cn</a>)</li>
-                <li>Prof. Dr. M. Abid (Thesis Supervisor, Email: <a href="mailto:mabid@pieas.edu.pk">mabid@pieas.edu.pk</a>)</li>
-            </ul>
-        </section>
+                </div>
+            </section>
+            <section id="tests" class="tab-content">
+                <h2>Standardized Tests</h2>
+                <div class="test-card">
+                    GRE: 319 (Quantitative: 162, Verbal: 157)
+                </div>
+                <div class="test-card">
+                    IELTS: 8.0 Bands
+                </div>
+            </section>
+            <section id="activities" class="tab-content">
+                <h2>Extracurricular Activities & Volunteering</h2>
+                <div class="activity-card">
+                    Competitive swimmer; winner of inter-university championships
+                </div>
+                <div class="activity-card">
+                    Volunteer for blood donation drives and scholarship fundraising initiatives at NUST
+                </div>
+            </section>
+            <section id="references" class="tab-content">
+                <h2>References</h2>
+                <div class="reference-card">
+                    Erfan Nejabat (Supervisor, Email: <a href="mailto:erfan.nejabat@sw-motion.cn">erfan.nejabat@sw-motion.cn</a>)
+                </div>
+                <div class="reference-card">
+                    Prof. Dr. M. Abid (Thesis Supervisor, Email: <a href="mailto:mabid@pieas.edu.pk">mabid@pieas.edu.pk</a>)
+                </div>
+            </section>
+        </div>
     </div>
     <script>
         function showTab(tabId) {
