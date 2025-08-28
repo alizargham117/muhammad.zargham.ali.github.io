@@ -8,6 +8,122 @@
     <title>Muhammad Zargham Ali - Portfolio & CV</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
+        /* Responsive design for mobile, tablet, and PC */
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-size: 1rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 1200px) {
+            html {
+                font-size: 15px;
+            }
+            .main-layout {
+                flex-direction: column;
+                min-height: unset;
+            }
+            .right-panel {
+                width: 100%;
+                min-width: unset;
+                border-radius: 16px 16px 0 0;
+                border-right: none;
+                border-left: none;
+                min-height: unset;
+                box-shadow: 0 2px 8px rgba(0,120,215,0.10);
+                padding: 1.5rem 1rem;
+            }
+            .left-panel {
+                width: 100vw;
+                border-radius: 0 0 16px 16px;
+                margin-left: 0;
+                padding: 1.2rem 0.5rem 2rem 0.5rem;
+                box-shadow: none;
+            }
+            .card-inner, .experience-card, .education-card, .publication-card, .test-card, .activity-card, .reference-card, .sub-card {
+                padding: 1em 0.5em;
+                font-size: 0.98em;
+                min-width: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+            }
+            .nav-top ul {
+                gap: 0.2rem;
+                padding: 0.2rem 0.2rem;
+            }
+            .nav-top a {
+                font-size: 0.95rem;
+                padding: 0.3rem 0.7rem;
+            }
+        }
+        @media (max-width: 700px) {
+            html {
+                font-size: 14px;
+            }
+            .main-layout {
+                flex-direction: column;
+            }
+            .right-panel {
+                width: 100%;
+                border-radius: 12px 12px 0 0;
+                padding: 1rem 0.5rem;
+            }
+            .left-panel {
+                width: 100vw;
+                border-radius: 0 0 12px 12px;
+                padding: 0.7rem 0.2rem 1.2rem 0.2rem;
+            }
+            .card-inner, .experience-card, .education-card, .publication-card, .test-card, .activity-card, .reference-card, .sub-card {
+                padding: 0.7em 0.2em;
+                font-size: 0.95em;
+                min-width: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+            h2 {
+                font-size: 1rem;
+            }
+            h3 {
+                font-size: 0.9rem;
+            }
+            .profile-photo {
+                width: 60px;
+                height: 60px;
+            }
+            .nav-top ul {
+                gap: 0.1rem;
+                padding: 0.1rem 0.1rem;
+            }
+            .nav-top a {
+                font-size: 0.85rem;
+                padding: 0.2rem 0.4rem;
+            }
+        }
         /* Ensure sub-card boxes are always visible and styled */
         .sub-card {
             background: #fff;
