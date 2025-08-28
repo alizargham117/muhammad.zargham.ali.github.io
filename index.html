@@ -28,34 +28,6 @@
             html {
                 font-size: 15px;
             }
-            .main-layout {
-                flex-direction: column;
-                min-height: unset;
-            }
-            .right-panel {
-                width: 100%;
-                min-width: unset;
-                border-radius: 16px 16px 0 0;
-                border-right: none;
-                border-left: none;
-                min-height: unset;
-                box-shadow: 0 2px 8px rgba(0,120,215,0.10);
-                padding: 1.5rem 1rem;
-            }
-            .left-panel {
-                width: 100vw;
-                border-radius: 0 0 16px 16px;
-                margin-left: 0;
-                padding: 1.2rem 0.5rem 2rem 0.5rem;
-                box-shadow: none;
-            }
-            .card-inner, .experience-card, .education-card, .publication-card, .test-card, .activity-card, .reference-card, .sub-card {
-                padding: 1em 0.5em;
-                font-size: 0.98em;
-                min-width: 0;
-                width: 100%;
-                box-sizing: border-box;
-            }
             h1 {
                 font-size: 1.7rem;
             }
@@ -81,26 +53,6 @@
         @media (max-width: 700px) {
             html {
                 font-size: 14px;
-            }
-            .main-layout {
-                flex-direction: column;
-            }
-            .right-panel {
-                width: 100%;
-                border-radius: 12px 12px 0 0;
-                padding: 1rem 0.5rem;
-            }
-            .left-panel {
-                width: 100vw;
-                border-radius: 0 0 12px 12px;
-                padding: 0.7rem 0.2rem 1.2rem 0.2rem;
-            }
-            .card-inner, .experience-card, .education-card, .publication-card, .test-card, .activity-card, .reference-card, .sub-card {
-                padding: 0.7em 0.2em;
-                font-size: 0.95em;
-                min-width: 0;
-                width: 100%;
-                box-sizing: border-box;
             }
             h1 {
                 font-size: 1.2rem;
@@ -245,14 +197,15 @@
             border-right: 4px solid #0078d7;
             border-left: none;
         }
-        .right-panel h1 {
-            width: 100%;
+        .right-panel {
+            background: linear-gradient(135deg, #232b3e 70%, #0078d7 100%, #90cdf4 120%);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0,120,215,0.18);
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            line-height: 1.1;
         }
         .right-panel h1 br {
             display: none;
@@ -378,9 +331,10 @@
             flex-direction: column;
             gap: 1rem;
             margin-bottom: 1rem;
+            align-items: center;
         }
         .header-links a {
-            color: #fff;
+        color: #fff !important;
             text-decoration: none;
             font-size: 1.1rem;
             display: flex;
@@ -390,11 +344,15 @@
             font-weight: 500;
             padding: 0.3em 0.7em;
             border-radius: 18px;
-            background: linear-gradient(90deg, #0078d7 60%, #232b3e 100%);
+        background: rgba(0,120,215,0.08);
+        color: #0056b3;
+        border: 1.5px solid #b3c7e6;
         }
         .header-links a:hover {
             color: #fff;
-            background: linear-gradient(90deg, #0056b3 60%, #0078d7 100%);
+        background: rgba(0,120,215,0.18);
+        color: #0078d7;
+        border: 1.5px solid #90cdf4;
         }
         .contact-info {
             width: 100%;
@@ -406,7 +364,10 @@
             text-align: left;
             padding-left: 0;
         }
-        .cv-link { margin-top: 1rem; }
+        .cv-link {
+            margin-top: 1rem;
+            text-align: center;
+        }
         .cv-link a {
             background: linear-gradient(90deg, #0078d7 60%, #232b3e 100%);
             color: #fff;
@@ -579,16 +540,14 @@
             <h1>Muhammad Zargham Ali</h1>
             <p>Control / System Engineer</p>
             <div class="header-links">
-                <a href="mailto:alizargham117@gmail.com" title="Email" style="color:#fff;text-decoration:none;"><span>✉</span> alizargham117@gmail.com</a>
-                <a href="https://www.linkedin.com/in/m-zargham-ali-3a91a314a" target="_blank" title="LinkedIn"><span>in</span> LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=Vs7_q2MAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="mailto:alizargham117@gmail.com" title="Email"><span>✉</span> alizargham117@gmail.com</a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="https://www.linkedin.com/in/m-zargham-ali-3a91a314a" target="_blank" title="LinkedIn"><span>in</span> LinkedIn</a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="https://scholar.google.com/citations?user=Vs7_q2MAAAAJ&hl=en" target="_blank" title="Google Scholar">
                     <img src="https://www.gstatic.com/images/icons/material/system/2x/school_black_36dp.png" alt="Google Scholar" width="20" height="20" style="vertical-align:middle; margin-right:6px; filter: invert(1) brightness(2);"> Google Scholar
                 </a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="tel:+923125217355" title="Phone"><span>☏</span> +92 312 5217355</a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="#" title="Location"><span>⚲</span> Faisalabad, Pakistan</a>
             </div>
-            <ul class="contact-info">
-                <li>☏ +92 312 5217355</li>
-                <li>⚲ Faisalabad, Pakistan</li>
-            </ul>
             <div class="skills-logos" style="display:flex; flex-wrap:wrap; gap:0.7em; justify-content:center; align-items:center; margin:1em 0 0.5em 0;">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="48" height="48" title="C++">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB" width="48" height="48" title="MATLAB">
@@ -605,7 +564,23 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="48" height="48" title="Linux">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="48" height="48" title="Docker">
             </div>
-            <p class="cv-link"><a href="CV_Muhammad_Zargham_Ali.pdf" target="_blank" style="color:#fff;text-decoration:underline;font-weight:bold;">Download CV (PDF)</a></p>
+            <p class="cv-link">
+                <a href="CV_Muhammad_Zargham_Ali.pdf" target="_blank" style="
+                    display:inline-block;
+                    font-size:0.95em;
+                    color:#fff;
+                    background:linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+                    border:none;
+                    border-radius:1.2em;
+                    padding:0.5em 1.2em;
+                    font-weight:500;
+                    text-decoration:none;
+                    box-shadow:0 2px 8px rgba(25,118,210,0.08);
+                    transition:background 0.2s;
+                " onmouseover="this.style.background='#1565c0';" onmouseout="this.style.background='linear-gradient(90deg, #1976d2 60%, #64b5f6 100%)';">
+                    Download CV (PDF)
+                </a>
+            </p>
         </div>
         <div class="left-panel">
             <nav class="nav-top">
