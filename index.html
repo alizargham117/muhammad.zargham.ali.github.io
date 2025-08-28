@@ -8,99 +8,125 @@
     <title>Muhammad Zargham Ali - Portfolio & CV</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
-        /* Ensure sub-card boxes are always visible and styled */
+        /* Black and yellow theme */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: #000;
+            color: #fff;
+        }
+        .main-layout {
+            background: #000;
+        }
+        .right-panel, .left-panel {
+            background: #000;
+            color: #fff;
+        }
+        .nav-top {
+            background: #000;
+            color: #ffd600;
+            border-left: 4px solid #ffd600;
+        }
+        .nav-top a {
+            background: #000;
+            color: #ffd600;
+            border: 1.5px solid #ffd600;
+            box-shadow: 0 4px 16px rgba(255,214,0,0.10);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+        .nav-top a.active, .nav-top a:hover {
+            background: #ffd600;
+            color: #000;
+            box-shadow: 0 8px 32px rgba(255,214,0,0.22);
+        }
+        .tab-content.active {
+            background: #000;
+            color: #fff;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(255,214,0,0.10);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ffd600;
+        }
+        /* Headings yellow */
+        h1, h2, h3, h4, h5, h6 {
+            color: #ffd600;
+        }
+        /* Main content white */
+        p, li, .main-content, .sub-card {
+            color: #fff;
+        }
+        /* Sub-content green */
+        .sub-content, .sub-card .sub-content, .sub-card ul li.sub-content {
+            color: #00ff00;
+        }
         .sub-card {
-            background: #fff;
+            background: #000;
             border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,120,215,0.10);
-            border: 1.5px solid #e3eaf2;
+            box-shadow: 0 2px 12px rgba(255,214,0,0.10);
+            border: 1.5px solid #ffd600;
             padding: 2em 2em 1.5em 2em;
             margin-top: 2em;
         }
         .sub-card:first-child {
             margin-top: 0;
         }
-        /* Glassmorphism and vibrant theme enhancements */
-        .main-layout, .right-panel, .left-panel, .tab-content.active, .nav-top, .skill-btn, .education-degree, .cv-link a {
-            backdrop-filter: blur(8px) saturate(120%);
-            -webkit-backdrop-filter: blur(8px) saturate(120%);
-        }
-        .right-panel, .left-panel, .tab-content.active {
-            border: 1.5px solid rgba(180, 199, 230, 0.18);
-        }
-        .tab-content.active {
-            background: linear-gradient(120deg, rgba(255,255,255,0.85) 80%, rgba(227,234,242,0.85) 100%);
-        }
-        .right-panel {
-            background: linear-gradient(135deg, #232b3e 70%, #0078d7 100%, #90cdf4 120%);
-        }
-        .left-panel {
-            background: linear-gradient(120deg, #f6f8fa 80%, #e3eaf2 100%, #b3c7e6 120%);
-        }
-        .nav-top {
-            background: linear-gradient(90deg, #e3eaf2 60%, #f6f8fa 100%, #b3c7e6 120%);
-        }
-        .nav-top a {
-            box-shadow: 0 4px 16px rgba(0,120,215,0.10);
-            border: 1.5px solid rgba(180, 199, 230, 0.18);
-            transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
-        }
-        .nav-top a.active, .nav-top a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 32px rgba(0,120,215,0.22);
-        }
         .skill-btn {
-            border: 1.5px solid rgba(180, 199, 230, 0.18);
-            transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+            background: #ffd600;
+            color: #000;
+            border: 1.5px solid #ffd600;
+            box-shadow: 0 1px 4px rgba(255,214,0,0.07);
         }
         .skill-btn:hover {
-            transform: scale(1.08);
-            box-shadow: 0 4px 16px rgba(0,120,215,0.18);
+            background: #000;
+            color: #ffd600;
         }
         .education-degree {
-            border: 1.5px solid rgba(180, 199, 230, 0.18);
+            background: #ffd600;
+            color: #000;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(255,214,0,0.07);
         }
         .cv-link a {
-            box-shadow: 0 4px 16px rgba(0,120,215,0.18);
-            border: 1.5px solid rgba(180, 199, 230, 0.18);
+            background: #ffd600;
+            color: #000;
+            border-radius: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+            box-shadow: 0 4px 16px rgba(255,214,0,0.18);
+            border: 1.5px solid #ffd600;
             transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
         }
         .cv-link a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 32px rgba(0,120,215,0.22);
+            background: #000;
+            color: #ffd600;
         }
         .profile-photo {
-            box-shadow: 0 8px 32px rgba(0,120,215,0.22);
-            border: 2.5px solid #90cdf4;
+            box-shadow: 0 8px 32px rgba(255,214,0,0.22);
+            border: 2.5px solid #ffd600;
             transition: box-shadow 0.3s, border 0.3s;
         }
         .profile-photo:hover {
-            box-shadow: 0 12px 48px rgba(0,120,215,0.32);
-            border: 2.5px solid #0078d7;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            background: linear-gradient(135deg, #e3eaf2 0%, #f6f8fa 100%);
-            color: #222;
+            box-shadow: 0 12px 48px rgba(255,214,0,0.32);
+            border: 2.5px solid #ffd600;
         }
         .education-badge {
             display: inline-block;
-            background: #e3eaf2;
-            color: #0056b3;
+            background: #000;
+            color: #ffd600;
             border-radius: 20px;
             padding: 0.4em 1em;
             margin: 0.2em 0.3em 0.2em 0;
             font-size: 1em;
             font-weight: 500;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+            box-shadow: 0 1px 4px rgba(255,214,0,0.07);
             text-decoration: none;
-            border: none;
+            border: 1.5px solid #ffd600;
             transition: background 0.2s, color 0.2s;
         }
         .education-badge:hover {
-            background: #c7dbf4;
-            color: #003366;
+            background: #ffd600;
+            color: #000;
             text-decoration: underline;
         }
         .main-layout {
@@ -113,20 +139,20 @@
         .right-panel {
             width: 255px;
             min-width: 195px;
-            background: linear-gradient(135deg, #232b3e 70%, #0078d7 100%);
-            color: #fff;
+            background: #000;
+            color: #ffd600;
             padding: 2rem 1rem;
             text-align: left;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             border-radius: 0 24px 24px 0;
-            box-shadow: 0 4px 24px rgba(0,120,215,0.18);
+            box-shadow: 0 4px 24px rgba(255,214,0,0.18);
             position: relative;
             min-height: 100vh;
             height: auto;
             z-index: 2;
-            border-right: 4px solid #0078d7;
+            border-right: 4px solid #ffd600;
             border-left: none;
         }
         .right-panel h1 {
@@ -145,10 +171,10 @@
             flex: 1 1 0%;
             width: calc(100vw - 255px);
             margin: 0;
-            background: linear-gradient(120deg, #f6f8fa 80%, #e3eaf2 100%);
+            background: #000;
             padding: 2rem 2rem 2rem 2rem;
             border-radius: 24px 0 0 24px;
-            box-shadow: 0 4px 24px rgba(0,120,215,0.10);
+            box-shadow: 0 4px 24px rgba(255,214,0,0.10);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -157,12 +183,12 @@
             height: auto;
         }
         .nav-top {
-            background: linear-gradient(90deg, #e3eaf2 60%, #f6f8fa 100%);
-            box-shadow: 0 2px 12px rgba(0,120,215,0.08);
+            background: #000;
+            box-shadow: 0 2px 12px rgba(255,214,0,0.08);
             border-radius: 24px 0 0 0;
             margin-bottom: 2rem;
             padding: 0.5rem 0;
-            border-left: 4px solid #0078d7;
+            border-left: 4px solid #ffd600;
             width: 100%;
         }
         .nav-top ul {
@@ -188,22 +214,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(90deg, #e3eaf2 80%, #b3c7e6 100%);
-            color: #1e2a38;
+            background: #000;
+            color: #ffd600;
             border-radius: 32px;
             padding: 0.6rem 1.4rem;
             font-weight: 700;
             font-size: 1rem;
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
             text-decoration: none;
-            box-shadow: 0 2px 8px rgba(0,120,215,0.07);
-            border: none;
+            box-shadow: 0 2px 8px rgba(255,214,0,0.07);
+            border: 1.5px solid #ffd600;
             cursor: pointer;
         }
         .nav-top a.active, .nav-top a:hover {
-            background: linear-gradient(90deg, #0078d7 60%, #0056b3 100%);
-            color: #fff;
-            box-shadow: 0 4px 16px rgba(0,120,215,0.18);
+            background: #ffd600;
+            color: #000;
+            box-shadow: 0 4px 16px rgba(255,214,0,0.18);
         }
         .tab-content {
             display: none;
@@ -211,12 +237,13 @@
         }
         .tab-content.active {
             display: block;
-            background: linear-gradient(120deg, #fff 80%, #e3eaf2 100%);
+            background: #000;
+            color: #fff;
             border-radius: 24px;
-            box-shadow: 0 4px 24px rgba(0,120,215,0.10);
+            box-shadow: 0 4px 24px rgba(255,214,0,0.10);
             padding: 2rem;
             margin-bottom: 2rem;
-            border: 1px solid #e3eaf2;
+            border: 1px solid #ffd600;
             animation: fadeIn 0.3s;
         }
         @keyframes fadeIn {
@@ -225,16 +252,16 @@
         }
         h2 {
             font-size: 2rem;
-            color: #0078d7;
+            color: #ffd600;
             margin-top: 0;
             margin-bottom: 1rem;
             font-weight: 700;
             letter-spacing: 0.5px;
-            text-shadow: 0 2px 8px #e3eaf2;
+            text-shadow: none;
         }
         h3 {
             font-size: 1.2rem;
-            color: #1e2a38;
+            color: #ffd600;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
@@ -250,8 +277,8 @@
             height: 120px;
             object-fit: cover;
             border-radius: 50%;
-            border: 4px solid #b3c7e6;
-            box-shadow: 0 4px 16px rgba(0,120,215,0.18);
+            border: 4px solid #ffd600;
+            box-shadow: 0 4px 16px rgba(255,214,0,0.18);
             margin-bottom: 1rem;
             display: block;
             margin-left: auto;
@@ -264,7 +291,7 @@
             margin-bottom: 1rem;
         }
         .header-links a {
-            color: #fff;
+            color: #ffd600;
             text-decoration: none;
             font-size: 1.1rem;
             display: flex;
@@ -274,11 +301,11 @@
             font-weight: 500;
             padding: 0.3em 0.7em;
             border-radius: 18px;
-            background: linear-gradient(90deg, #0078d7 60%, #232b3e 100%);
+            background: #000;
         }
         .header-links a:hover {
-            color: #fff;
-            background: linear-gradient(90deg, #0056b3 60%, #0078d7 100%);
+            color: #000;
+            background: #ffd600;
         }
         .contact-info {
             width: 100%;
@@ -292,16 +319,18 @@
         }
         .cv-link { margin-top: 1rem; }
         .cv-link a {
-            background: linear-gradient(90deg, #0078d7 60%, #232b3e 100%);
-            color: #fff;
+            background: #000;
+            color: #ffd600;
             padding: 0.4em 1.2em;
             border-radius: 18px;
             font-weight: bold;
             text-decoration: underline;
-            transition: background 0.2s;
+            border: 1.5px solid #ffd600;
+            transition: background 0.2s, color 0.2s;
         }
         .cv-link a:hover {
-            background: linear-gradient(90deg, #0056b3 60%, #0078d7 100%);
+            background: #ffd600;
+            color: #000;
         }
         @media (max-width: 900px) {
             .main-layout { flex-direction: column; }
@@ -372,24 +401,24 @@
                     cursor: default;
                     transition: background 0.2s, color 0.2s;
                 }
+                .skill-btn {
+                    display: inline-block;
+                    background: #000;
+                    color: #ffd600;
+                    border: 1.5px solid #ffd600;
+                    border-radius: 20px;
+                    padding: 0.4em 1em;
+                    margin: 0.2em 0.3em 0.2em 0;
+                    font-size: 1em;
+                    font-weight: 500;
+                    box-shadow: 0 1px 4px rgba(255,214,0,0.07);
+                    cursor: default;
+                    transition: background 0.2s, color 0.2s;
+                }
                 .skill-btn:hover {
-                    background: linear-gradient(90deg, #b3c7e6 80%, #e3eaf2 100%);
-                    color: #003366;
+                    background: #ffd600;
+                    color: #000;
                 }
-                .profile-photo {
-                    width: 80px;
-                    height: 80px;
-                }
-                h1 {
-                    font-size: 1.5rem;
-                }
-                h2 {
-                    font-size: 1.3rem;
-                }
-                h3 {
-                    font-size: 1rem;
-                }
-                .nav-top ul {
                     gap: 0.2rem;
                     padding: 0.2rem 0.2rem;
                 }
@@ -432,23 +461,24 @@
         }
         .education-degree {
             display: inline-block;
-            background: linear-gradient(90deg, #e3eaf2 80%, #f6f8fa 100%);
-            color: #333;
+            background: #000;
+            color: #ffd600;
             border-radius: 16px;
             padding: 0.3em 0.8em;
             margin: 0.2em 0.3em 0.2em 0;
             font-size: 1em;
             font-weight: 500;
-            box-shadow: 0 2px 8px rgba(0,120,215,0.07);
+            box-shadow: 0 2px 8px rgba(255,214,0,0.07);
+            border: 1.5px solid #ffd600;
         }
             .education-card {
-                background: #fff;
-                color: #222;
+                background: #000;
+                color: #fff;
                 border-radius: 16px;
                 padding: 1.5em 2em;
                 margin-bottom: 2.2em;
-                box-shadow: 0 2px 12px rgba(0,120,215,0.10);
-                border: 1.5px solid #e3eaf2;
+                box-shadow: 0 2px 12px rgba(255,214,0,0.10);
+                border: 1.5px solid #ffd600;
                 font-size: 1.08em;
             }
             .education-card:last-child {
@@ -506,13 +536,13 @@
             </nav>
             <section id="highlights" class="tab-content active">
                 <h2>Personal Highlights</h2>
-                <div class="card-inner" style="background:#f6f8fa; border-radius:12px; box-shadow:0 1px 8px rgba(0,120,215,0.07); border:1px solid #e3eaf2; padding:1.2em 1.5em;">
-                    <div class="sub-card" style="display: flex; align-items: center; gap: 2em; flex-wrap: wrap;">
+                <div class="card-inner">
+                    <div class="sub-card" style="display: flex; align-items: center; gap: 2em; flex-wrap: wrap; background: linear-gradient(120deg, #111 80%, #222 100%, #ffd600 120%); border: 2px solid #ffd600;">
                         <div style="flex:1; min-width:220px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                             <img src="auto_D.png" alt="Quadcopter" style="width:210px; height:150px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
                         </div>
                         <div style="flex:2; min-width:260px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                            <blockquote style="font-size:1.15em; font-weight:bold; font-style:italic; color:#222; text-align:justify; margin:0 auto; max-width:520px; padding:0.5em 0;">
+                            <blockquote style="font-size:1.15em; font-weight:bold; font-style:italic; color:#fff; text-align:justify; margin:0 auto; max-width:520px; padding:0.5em 0;">
                                 With over five years of experience in control systems, UAV avionics integration, and automotive software, I specialize in bridging hardware and software for autonomous systems. My background includes developing custom flight control algorithms, implementing SIL-tested ADAS features for OEMs like BYD and GM, and validating safety-critical software. Skilled in embedded C++, MATLAB/Simulink, Git, and AUTOSAR, I bring strong expertise in control algorithm design, debugging, and system integration.
                             </blockquote>
                         </div>
@@ -562,7 +592,7 @@
                         <p>Hands-on UAV design, flight controls, avionics integration, and production leadership. Technical depth and systems-level perspective for successful UAV programs.</p>
                     </div>
                     <!-- Skill logos removed from Personal Highlights as requested -->
-                    <div class="sub-card" style="background:#f6f8fa; border-radius:8px; box-shadow:0 1px 6px rgba(0,120,215,0.07); border:1px solid #e3eaf2; padding:1em 1.2em; margin-top:1.5em; min-height:80px; text-align:center; color:#888; font-style:italic;">
+                    <div class="sub-card" style="background: linear-gradient(120deg, #111 80%, #222 100%, #ffd600 120%); border-radius:8px; box-shadow:0 1px 6px rgba(255,214,0,0.18); border:2px solid #ffd600; padding:1em 1.2em; margin-top:1.5em; min-height:80px; text-align:center; color:#ffd600; font-style:italic;">
                         More projects and highlights coming soon...
                     </div>
                 </div>
@@ -634,7 +664,7 @@
                             <span class="education-badge">IFAC World Congress 2020</span>
                             <span class="education-badge">Teaching Assistant</span>
                         </div>
-                        <div style="color:#444; font-size:0.98em;">Research published at IFAC World Congress 2020, Teaching Assistant for Control Systems Lab.</div>
+                        <div style="color:#fff; font-size:0.98em;">Research published at IFAC World Congress 2020, Teaching Assistant for Control Systems Lab.</div>
                     </div>
                 </div>
                 <div class="education-card" style="display: flex; align-items: flex-start; gap: 1.2em;">
@@ -649,7 +679,7 @@
                             <span class="education-badge">Merit-based Scholarship</span>
                             <span class="education-badge">Electronic Nose Prototype</span>
                         </div>
-                        <div style="color:#444; font-size:0.98em;">Silver Medal for second-highest GPA, Merit-based scholarship, Designed electronic nose prototype for gas detection.</div>
+                        <div style="color:#fff; font-size:0.98em;">Silver Medal for second-highest GPA, Merit-based scholarship, Designed electronic nose prototype for gas detection.</div>
                     </div>
                 </div>
             </section>
