@@ -619,9 +619,9 @@
                             <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
                                 <img src="resources/ISR.jpg" alt="ISR Surveillance UAV" style="width:360px; height:247px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
                                 <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
-                                    <li><strong>1-hour endurance:</strong> Designed for extended missions, maximizing operational time in the field.</li>
-                                    <li><strong>Custom ArduPilot:</strong> Utilizes tailored flight control firmware for advanced stability and mission profiles.</li>
-                                    <li><strong>Operational:</strong> Successfully deployed and in active service for surveillance operations.</li>
+                                    <li><strong>Custom software:</strong> Implemented software updates to optimize target identification and tracking during long-duration flights.</li>
+                                    <li><strong>Firmware adaptation:</strong> Modified flight control algorithms for enhanced stability and tailored ISR mission requirements.</li>
+                                    <li><strong>Deployment:</strong> Delivered and validated the platform in active surveillance operations.</li>
                                 </ul>
                             </div>
                         </div>
@@ -630,9 +630,9 @@
                             <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
                                 <img src="resources/PD.jpg" alt="Payload Delivery UAV" style="width:360px; height:247px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
                                 <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
-                                    <li><strong>Precision munitions drop:</strong> Engineered for accurate payload release in tactical scenarios.</li>
-                                    <li><strong>Qualified in Army field trials:</strong> Rigorously tested and validated for reliability and effectiveness.</li>
-                                    <li><strong>Active combat role:</strong> Used in operational missions for direct support and logistics.</li>
+                                    <li><strong>Precision drop algorithms:</strong> Developed and integrated custom C++ modules in ArduPilot for accurate payload release.</li>
+                                    <li><strong>Field trial validation:</strong> Led software modifications and testing to meet Army qualification standards.</li>
+                                    <li><strong>Operational integration:</strong> Supported deployment and troubleshooting in live combat scenarios.</li>
                                 </ul>
                             </div>
                         </div>
@@ -641,9 +641,9 @@
                             <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
                                 <img src="resources/kam.jpg" alt="Kamikaze Drone" style="width:360px; height:247px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
                                 <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
-                                    <li><strong>Autonomous targeting:</strong> Capable of identifying and locking onto targets without manual intervention.</li>
-                                    <li><strong>Custom dive maneuver:</strong> Programmed for precise attack trajectories and mission-specific descent profiles.</li>
-                                    <li><strong>Deployed in operational scenarios:</strong> Proven effectiveness in real-world missions and tactical environments.</li>
+                                    <li><strong>Autonomous targeting logic:</strong> Implemented target identification and locking routines by extending ArduPilot’s C++ codebase.</li>
+                                    <li><strong>Dive maneuver programming:</strong> Designed and coded custom descent and attack trajectory modules for mission-specific operations.</li>
+                                    <li><strong>Field deployment:</strong> Provided direct software support and validation during operational missions.</li>
                                 </ul>
                             </div>
                         </div>
@@ -687,43 +687,15 @@
             </section>
             <section id="experience" class="tab-content">
                 <h2>Experience</h2>
-                <div class="experience-card" style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.5em 2em; display: flex; align-items: flex-start; gap: 1.2em; margin-bottom:2em;">
-                    <img src="resources/logo_nes.png" alt="NCUAS Logo" style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
-                    <div style="flex:1;">
-                        <h3 style="margin-top:0;">National Center for Unmanned Aerial Systems (NCUAS), Islamabad, Pakistan</h3>
-                        <div class="experience-card" style="background:#f6f8fa; margin-bottom:1.2em; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
-                            <strong>Manager (Senior System Engineer)</strong> <em>Dec 2021 – Present</em>
-                            <ul>
-                                <li>Led design, testing, and deployment of autonomous multirotor platforms with custom ArduPilot firmware for advanced targeting and payload delivery.</li>
-                                <li>Oversaw UAV avionics manufacturing lines, ensuring integration consistency, system robustness, and compliance with operational requirements.</li>
-                                <li>Engineered custom control algorithms for precision payload delivery to designated target areas using multirotor UAVs.</li>
-                                <li>Developed and integrated auto-target locking functionality using image processing, camera gimbal control, and custom ArduPilot firmware enhancements.</li>
-                                <li>Designed and implemented dive maneuver algorithms in ArduPilot for mission-specific autonomous descent and targeting applications.</li>
-                                <li>Executed and supervised live flight trials across varied terrains and environmental conditions to validate mission readiness.</li>
-                                <li>Delivered production-grade UAV platforms currently operational in military applications.</li>
-                                <li>Functioned as the key bridge between control software, embedded avionics, and testing teams.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-card" style="background:#f6f8fa; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
-                            <strong>Assistant Manager (System Engineer)</strong> <em>Nov 2019 – Dec 2021</em>
-                            <ul>
-                                <li>Developed and tested UAV avionics systems, integrated payloads, and ensured platform readiness through calibration, validation, and pre-mission checks.</li>
-                                <li>Integrated diverse camera payloads with multirotor UAV platforms using custom MAVLink protocols and extended ArduPilot open-source flight stack.</li>
-                                <li>Developed and embedded custom libraries for real-time data transmission from UAV to Ground Control Station (GCS).</li>
-                                <li>Led Avionics manufacturing oversight: validated and inspected flight-critical modules, including Flight Controllers, Companion Computers, Power Management Units, Radio Links, and Camera systems.</li>
-                                <li>Executed pre-flight calibration and tuning, including compass offsets, level alignment, and sensor configuration.</li>
-                                <li>Performed bench-level avionics validation and full-stack UAV system tests, ensuring signal integrity, redundancy, and uninterrupted power distribution.</li>
-                                <li>Delivered field-ready surveillance UAVs currently deployed by the military for aerial monitoring.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-card" style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.5em 2em; display: flex; align-items: flex-start; gap: 1.2em;">
+                <div class="experience-card" style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.5em 2em; display: flex; align-items: flex-start; gap: 1.2em; margin-bottom:1em;">
                     <img src="resources/logo_sw.png" alt="Software Motion Logo" style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
                     <div style="flex:1;">
-                        <h3 style="margin-top:0;">Software Motion (Remote, Part-Time), Shanghai, China</h3>
+                        <h3 style="margin-top:0; display:flex; justify-content:space-between; align-items:center;">
+                            Software Motion
+                            <span style="text-align:right; flex-shrink:0;"> (Remote) Shanghai, China</span>
+                        </h3>
                         <div class="experience-card" style="background:#f6f8fa; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
-                           <strong>Control Engineer</strong> <em>Dec 2024 – Present</em>
+                           <strong>Control Engineer</strong> <em>(Dec 2024 – Present)</em>
                         <ul>
                             <li>Delivering production-grade ADAS features in C++ with SIL testing, unit validation, and real-world data debugging for top automotive OEMs.</li>
                             <li>Design and implement ADAS functionalities in C++, including: Front Collision Warning (FCW), Autonomous Emergency Braking (AEB), Adaptive Cruise Control (ACC), Lane Keep Assist (LKA), Traffic Sign Recognition (TSR).</li>
@@ -738,14 +710,48 @@
                         </div>                        
                     </div>
                 </div>
+                <div class="experience-card" style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.5em 2em; display: flex; align-items: flex-start; gap: 1.2em; ">
+                    <img src="resources/logo_nes.png" alt="NCUAS Logo" style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
+                    <div style="flex:1;">
+                        <h3 style="margin-top:0; display:flex; justify-content:space-between; align-items:center;">
+                            National Center for Unmanned Aerial Systems (NCUAS)
+                            <span style="text-align:right; flex-shrink:0;"> Islamabad, Pakistan</span>
+                        </h3>
+                        <div class="experience-card" style="background:#f6f8fa; margin-bottom:1.2em; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
+                            <strong>Manager - Senior System Engineer</strong> <em>(Dec 2021 – Dec 2024)</em>
+                            <ul>
+                                <li>Led design, testing, and deployment of autonomous multirotor platforms with custom ArduPilot firmware for advanced targeting and payload delivery.</li>
+                                <li>Oversaw UAV avionics manufacturing lines, ensuring integration consistency, system robustness, and compliance with operational requirements.</li>
+                                <li>Engineered custom control algorithms for precision payload delivery to designated target areas using multirotor UAVs.</li>
+                                <li>Developed and integrated auto-target locking functionality using image processing, camera gimbal control, and custom ArduPilot firmware enhancements.</li>
+                                <li>Designed and implemented dive maneuver algorithms in ArduPilot for mission-specific autonomous descent and targeting applications.</li>
+                                <li>Executed and supervised live flight trials across varied terrains and environmental conditions to validate mission readiness.</li>
+                                <li>Delivered production-grade UAV platforms currently operational in military applications.</li>
+                                <li>Functioned as the key bridge between control software, embedded avionics, and testing teams.</li>
+                            </ul>
+                        </div>
+                        <div class="experience-card" style="background:#f6f8fa; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
+                            <strong>Assistant Manager - System Engineer</strong> <em>(Nov 2019 – Dec 2021)</em>
+                            <ul>
+                                <li>Developed and tested UAV avionics systems, integrated payloads, and ensured platform readiness through calibration, validation, and pre-mission checks.</li>
+                                <li>Integrated diverse camera payloads with multirotor UAV platforms using custom MAVLink protocols and extended ArduPilot open-source flight stack.</li>
+                                <li>Developed and embedded custom libraries for real-time data transmission from UAV to Ground Control Station (GCS).</li>
+                                <li>Led Avionics manufacturing oversight: validated and inspected flight-critical modules, including Flight Controllers, Companion Computers, Power Management Units, Radio Links, and Camera systems.</li>
+                                <li>Executed pre-flight calibration and tuning, including compass offsets, level alignment, and sensor configuration.</li>
+                                <li>Performed bench-level avionics validation and full-stack UAV system tests, ensuring signal integrity, redundancy, and uninterrupted power distribution.</li>
+                                <li>Delivered field-ready surveillance UAVs currently deployed by the military for aerial monitoring.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
             </section>
             <section id="education" class="tab-content">
                 <h2>Education</h2>
-                <div class="education-card" style="margin-bottom:1.5em; display: flex; align-items: flex-start; gap: 1.2em;">
+                <div class="education-card" style="margin-bottom:1em; display: flex; align-items: flex-start; gap: 1.2em;">
                     <img src="resources/logo_p.png" alt="PIEAS Logo" style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
                     <div style="flex:1;">
                         <h3 style="margin-top:0;">Pakistan Institute of Engineering and Applied Sciences (PIEAS), Islamabad, Pakistan</h3>
-                        <h4>M.S. Systems Engineering <em>2017 - 2019</em></h4>
+                        <h4>M.S. Systems Engineering <em>(2017 - 2019)</em></h4>
                         <div style="margin:0.7em 0 0.7em 0;">
                             <span class="education-badge">GPA: 3.77 / 4.0</span>
                             <span class="education-badge">Second Best Thesis Award</span>
@@ -758,7 +764,7 @@
                     <img src="resources/logo_n.png" alt="NUST Logo" style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
                     <div style="flex:1;">
                         <h3 style="margin-top:0;">National University of Sciences & Technology (NUST), Islamabad, Pakistan</h3>
-                        <h4>B.E. Electrical Engineering <em>2013 - 2017</em></h4>
+                        <h4>B.E. Electrical Engineering <em>(2013 - 2017)</em></h4>
                         <div style="margin:0.7em 0 0.7em 0;">
                             <span class="education-badge">GPA: 3.68 / 4.0</span>
                             <span class="education-badge">Silver Medal</span>
