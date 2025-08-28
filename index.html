@@ -8,6 +8,18 @@
     <title>Muhammad Zargham Ali - Portfolio & CV</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
+        /* Ensure sub-card boxes are always visible and styled */
+        .sub-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,120,215,0.10);
+            border: 1.5px solid #e3eaf2;
+            padding: 2em 2em 1.5em 2em;
+            margin-top: 2em;
+        }
+        .sub-card:first-child {
+            margin-top: 0;
+        }
         /* Glassmorphism and vibrant theme enhancements */
         .main-layout, .right-panel, .left-panel, .tab-content.active, .nav-top, .skill-btn, .education-degree, .cv-link a {
             backdrop-filter: blur(8px) saturate(120%);
@@ -364,7 +376,6 @@
                     background: linear-gradient(90deg, #b3c7e6 80%, #e3eaf2 100%);
                     color: #003366;
                 }
-                }
                 .profile-photo {
                     width: 80px;
                     height: 80px;
@@ -496,7 +507,7 @@
             <section id="highlights" class="tab-content active">
                 <h2>Personal Highlights</h2>
                 <div class="card-inner" style="background:#f6f8fa; border-radius:12px; box-shadow:0 1px 8px rgba(0,120,215,0.07); border:1px solid #e3eaf2; padding:1.2em 1.5em;">
-                    <div class="sub-card" style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:2em 2em 1.5em 2em; display: flex; align-items: center; gap: 2em; flex-wrap: wrap;">
+                    <div class="sub-card" style="display: flex; align-items: center; gap: 2em; flex-wrap: wrap;">
                         <div style="flex:1; min-width:220px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                             <img src="auto_D.png" alt="Quadcopter" style="width:210px; height:150px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
                         </div>
@@ -508,6 +519,47 @@
                         <div style="flex:1; min-width:220px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                             <img src="auto-V.png" alt="Autonomous Vehicle" style="width:210px; height:150px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
                         </div>
+                    </div>
+                    <!-- New highlight cards below -->
+                    <div class="sub-card">
+                        <h3>Combat & Endurance UAV Projects</h3>
+                        <ul>
+                            <li><strong>ISR Surveillance UAV:</strong> 1-hour endurance, custom ArduPilot, carbon-fiber airframe, operational with Pakistan Army.</li>
+                            <li><strong>Payload Delivery UAV:</strong> Precision munitions drop, qualified in Army field trials, active combat role.</li>
+                            <li><strong>Kamikaze Drone:</strong> Autonomous targeting, custom dive maneuver, deployed in operational scenarios.</li>
+                        </ul>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Innovation in Avionics & Manufacturing</h3>
+                        <p>Developed custom flight control code, adapted open-source platforms, and built a Chinese supply chain for avionics sourcing. Oversaw carbon-fiber airframe production and rigorous QA for military-grade reliability.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Field Trials & Military Deployment</h3>
+                        <ul>
+                            <li>Validated UAVs in desert, coastal, and high-altitude terrains.</li>
+                            <li>Successful deployments with Pakistan Army, Navy, and Artillery Directorate.</li>
+                            <li>Regular maintenance and user training at 506 UAV Workshop.</li>
+                        </ul>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Special Projects & Technical Impact</h3>
+                        <ul>
+                            <li><strong>Artillery Fire Correction UAV:</strong> Automated GPS-based corrections for artillery shells.</li>
+                            <li><strong>Radiation Monitoring UAV:</strong> Integrated sensors for Pakistan Atomic Energy Commission.</li>
+                            <li><strong>Advanced payload integration:</strong> EO/IR cameras, gimbals, real-time telemetry.</li>
+                        </ul>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Overcoming Challenges</h3>
+                        <p>Started with a small team, overcame resource constraints, and delivered 100+ UAV systems now in service. Managed tenders, funding, and technical qualification for large-scale impact.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Training & Knowledge Transfer</h3>
+                        <p>Conducted hands-on workshops and regular training for Army aviation technicians, ensuring sustainable UAV operations and maintenance expertise within the military.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Systems Perspective & Closing</h3>
+                        <p>Hands-on UAV design, flight controls, avionics integration, and production leadership. Technical depth and systems-level perspective for successful UAV programs.</p>
                     </div>
                     <!-- Skill logos removed from Personal Highlights as requested -->
                     <div class="sub-card" style="background:#f6f8fa; border-radius:8px; box-shadow:0 1px 6px rgba(0,120,215,0.07); border:1px solid #e3eaf2; padding:1em 1.2em; margin-top:1.5em; min-height:80px; text-align:center; color:#888; font-style:italic;">
